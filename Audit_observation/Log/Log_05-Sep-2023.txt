@@ -1,2 +1,0 @@
-﻿09/05/2023,09:16:00,INFO,InitAllSettings,RBIA Audit pending,DT614262-376307-376307-Automation_Process
-09/05/2023,09:16:01,INFO,InitAllSettings,RBIA Audit pending,DT614262-376307-376307-Read Config File
