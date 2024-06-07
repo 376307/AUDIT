@@ -1,0 +1,2 @@
+﻿12/08/2023,08:36:36,INFO,InitAllSettings,Tare Weight MIsmatch Report,DT614262-376307-376307-Automation_Process
+12/08/2023,08:36:37,INFO,InitAllSettings,Tare Weight MIsmatch Report,DT614262-376307-376307-Read Config File

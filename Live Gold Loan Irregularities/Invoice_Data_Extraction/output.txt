@@ -1,0 +1,99 @@
+04/18/2023 14:52:05 => [Debug] Debug started for file: Main
+04/18/2023 14:52:07 => [Info] Invoice_Data_Extraction execution started
+04/18/2023 14:52:10 => [Debug] VERTEX TECHNO SOLUTIONS (B) PVT LTD TAX INVOICE
+55/3561, Pearl Kurumthottical Haven, St.Mary's Soonoro Church Road, Elamkulam, Ernakulam,
+Kerala - 682020.PH: 0484-4024023 GSTIN/UIN: 32AACCV2236Q1Z5 STATE NAME: Kerala, Original Copy
+Code : 32 CIN: U72200KA2006PTC038856 PAN : AACCV2236Q Invoice Number Invoice Date SO Number Customer PO No
+E-Mail: accounts@teamvertex.com
+
+2242093 23-01-2023 2214105 PO/01/287910/2022-23 dtd 29-12-2022
+Billing Address : Delivery Address:  Customer Code   :   C0072
+Manappuram Finance Ltd Manappuram Finance Ltd
+BRANCH ID-2566, BRANCH BRANCH ID-2566, BRANCH NAME-SOMASUNDARAPALAYAM  Customer Name   :  Manappuram Finance Ltd
+NAME-SOMASUNDARAPALAYAM  37/111,1ST  37/111,1ST  FLOOR,BHASKAR REDDY BUILDING,OPP KRISHNA
+FLOOR,BHASKAR REDDY BUILDING,OPP KRISHNA BEKARY,HSR SECOND SECTOR,HSR LAYOUT Contact Details :
+BEKARY,HSR SECOND SECTOR,HSR LAYOUT Bangalore-560102 Name :
+Bangalore-560102 IN
+IN 29 - Karnataka Contact Number :
+29 - Karnataka India Email Id:
+India CONTACT NO. : 9072695163/ 9902516566
+CONTACT PERSON : SENTHIL V Payment Due Date : 22-February-2023
+GSTIN/UIN : 29AABCM6882E1Z7 GSTIN/UIN : 29AABCM6882E1Z7 Payment Terms: Net-30
+PAN/IT NO : AABCM6882E
+Place Of Supply / State Code : Karnataka / 29
+
+Terms Of Delivery: E-Way Bill No.:
+
+IRN Date : 23-01-2023
+
+IRN No : 8e0584f1313c4cb6ebbc29fae5545c0535eb734c6f13535d 11dd
+Dispatch Document No : Dispatched through : DROP SHIPMENT BY VENDOR bc227fb2c227
+
+Sno Item-Service Code / Warranty HSN / SAC Quantity UOM Unit Price Total Before Discount Total CGST [INR] SGST [INR] IGST [INR] Line Total
+Item-Service Description Code [INR] Discount [INR] [INR] Rate Amount Rate Amount Rate Amount [INR]
+[INR]
+
+1 4N4P0AV / HP Pro Tower 280 G9 1 Year 84713010.. 2.00 Nos 38,850.00 77,700.00 0.00 77,700.00 0.00 0.00 0.00  0.00  18.00 13986.00 91686.00
+
+2 5RD66AA / HP P204v 19.5-inch Monitor 3 Years 85281211.. 2.00 Nos 0.00 0.00 0.00 0.00 0.00 0.00 0.00  0.00  18.00 0.00 0.00
+
+3 U10N3E / HP 3 YEAR NEXT BUSINESS 2 Years 00998713 2.00 Nos 0.00 0.00 0.00 0.00 0.00 0.00 0.00  0.00  18.00 0.00 0.00
+DAY ONSITE HARDWARE SUPPORT FOR
+HP DESKTOPS
+
+Total Amount [INR] 77,700.00 0.00 13,986.00 91,686.00
+
+TCS  0.00
+Amount In Words :  INR   Ninety-One Thousand Six Hundred Eighty-Six only
+KFC @ 1 % 0.00
+
+Whether the tax is payable on Reverse Charge basis : [No] Invoice Total [INR] 91,686.00
+
+Declaration : We declare that this Invoice shows the actual price of the goods described and that all the particulars are True and Correct . All the Matters are subject to Bangalore Jurisdiction. All the Terms and Conditions are as per Quote No.  by
+Acknowledging receipt of the Goods hereon, the Buyer irrevocably agrees to abide by the Terms and Conditions along with this Invoice and over any other Terms agreed elsewhere between the Buyer and Supplier .
+TDS Declaration: In terms of Notification  No. 21/2012 dt. 13.06.2012, we hereby declare and confirm that in case of sale of software, software is acquired in a subsequent transfer and is transferred without any modification and tax is deducted at source u/s
+195 and/or u/s 194J as applicable while making payment to the previous transfer of such software or while making payment to OEM /supplier. You are not required to deduct tax at source on this account .
+Company's Bank Details
+We accept payment through electronic mode including the Modes specified under Rules 1                19AA of the income Tax Rules , 1962.Our bank account details for e-payment are as under:
+Bank Name : UNION BANK OF INDIA
+(Formerly Known as ANDHRA BANK) For  VERTEX TECHNO SOLUTIONS (B) PVT LTD
+Digitally signed by
+Bank Account No : 009931043020262 SUNIL SUNIL KESAVAN
+Branch : CANTONMENT BRANCH, BANGALORE Date: 2023.01.24
+IFSC /SWIFT Code UBIN0800996 / UBININBBOBR (Customer Sign and Seal) KESAVAN 22:05:03 +05'30'
+:
+
+Place of Dispatch : Signature of the Authorized Representative
+
+E. & O.E This is Computer Generated Invoice Page 1 of 2VERTEX TECHNO SOLUTIONS (B) PVT LTD TAX INVOICE
+55/3561, Pearl Kurumthottical Haven, St.Mary's Soonoro Church Road, Elamkulam, Ernakulam,
+Kerala - 682020.PH: 0484-4024023 GSTIN/UIN: 32AACCV2236Q1Z5 STATE NAME: Kerala, Original Copy
+Code : 32 CIN: U72200KA2006PTC038856 PAN : AACCV2236Q
+E-Mail: accounts@teamvertex.com Invoice Number Invoice Date SO Number Customer PO No
+
+2242093 23-01-2023 2214105 PO/01/287910/2022-23 dtd 29-12-2022
+
+ItemCode Item Details Serial No Quantity Per
+
+4N4P0AV Intel Core i5-12400 2.50G 18MB 6 cores 65W 1n130203r7 , 1n130203v5 2.00 Nos
+8GB (1x8GB) DDR4 2933 DIMM Memory
+512GB M.2 2280 PCIe NVMe Solid State Drive
+FreeDOS
+OS Localization
+HP 280 G9 MT 180W RCTO Chassis
+HP 125 BLK Wired Keyboard
+HP Black 125 Wired Mouse
+No Included ODD
+Realtek ac 2x2 +Bluetooth 5.0 WW WLAN
+HP Serial Port Rear Wall
+HP 280/Summit G9 MT Country Kit
+C13 1.83m Straight Power Cord
+C13 1.83m Straight Power Cord
+1/1/1 (material/labor/onsite) MT Warranty
+Single Unit (Microtower) EPE Packaging
+1/1/1 TWR Label
+
+5RD66AA 3CQ2440G3X , 3CQ2440G49 2.00 Nos
+
+E. & O.E This is Computer Generated Invoice Page 2 of 2
+04/18/2023 14:52:10 => [Error] Assign: Value cannot be null. (Parameter 'source')
