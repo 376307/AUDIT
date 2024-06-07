@@ -1,0 +1,23 @@
+select s.audit_reg_name,
+       s.state,
+       t.branch_id,
+       s.branch_name,
+       (to_date(sysdate) - x.maxdt) lagdays,
+       x.auditid,
+       x.maxdt
+  from mana0809.TBL_FOREX_AUDIT_DATA t,
+       mana0809.tbl_forex_audit_branch_dtl s,
+       (select t.branch_id,
+               max(to_date(t.forex_audit_dt)) maxdt,
+               max(t.forex_audit_id) auditid
+          from MANA0809.TBL_FOREX_AUDIT_DATA t
+         group by t.branch_id) x
+ where t.branch_id = s.branch_id
+   and t.branch_id = x.branch_id
+ group by t.branch_id,
+          s.branch_name,
+          s.audit_reg_name,
+          s.state,
+          x.maxdt,
+          x.auditid;
+

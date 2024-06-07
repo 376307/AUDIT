@@ -1,0 +1,56 @@
+select *
+  from (select t.BRANCH_ID,
+               t.BRANCH_NAME,
+               m.region_name,
+               to_char(max(b.comp_dt)),
+               to_date(sysdate) - (max(b.comp_dt)) as Lag_days
+          from mana0809.BRANCH_master     t,
+               mana0809.tbl_security_main b,
+               mana0809.audit_region_dtl  d,
+               mana0809.audit_region_mst  m
+         where t.BRANCH_ID = b.branch_id
+           and t.BRANCH_ID = d.branch_id
+           and d.branch_id = b.branch_id
+           and d.region_id = m.region_id
+           and t.status_id = 1
+           and not exists (select k.branch_id
+                  from mana0809.tbl_sec_auditor_mst k
+                 where k.branch_id = t.BRANCH_ID)
+         group by t.BRANCH_ID, t.BRANCH_NAME, m.region_name
+        having to_date(sysdate) - (max(b.comp_dt)) between '0' and '700'
+        union all
+        select t.BRANCH_ID,
+               t.BRANCH_NAME,
+               m.region_name,
+               to_char(max(b.audit_dt)),
+               to_date(sysdate) - (max(b.audit_dt)) as Lag_days
+          from mana0809.BRANCH_master       t,
+               mana0809.tbl_sec_auditor_mst b,
+               mana0809.audit_region_dtl    d,
+               mana0809.audit_region_mst    m
+         where t.BRANCH_ID = b.branch_id
+           and d.branch_id = t.BRANCH_ID
+           and d.region_id = m.region_id
+           and b.branch_id = d.branch_id
+           and t.status_id = 1
+         group by t.BRANCH_ID, t.BRANCH_NAME, m.region_name
+        having to_date(sysdate) - (max(b.audit_dt)) between '0' and '700'
+        union all
+        select t.BRANCH_ID,
+               t.BRANCH_NAME,
+               m.region_name,
+               'No audit date',
+               to_date(sysdate) - (max(t.inauguration_dt)) as Lag_days
+          from mana0809.BRANCH_master t, mana0809.audit_region_mst m, mana0809.audit_region_dtl d
+         where not exists (select k.branch_id
+                  from mana0809.tbl_sec_auditor_mst k
+                 where t.BRANCH_ID = k.branch_id)
+           and not exists (select j.branch_id
+                  from mana0809.tbl_security_main j
+                 where t.BRANCH_ID = j.branch_id)
+           and t.branch_id = d.branch_id
+           and m.region_id = d.region_id
+           and t.status_id = 1
+         group by t.BRANCH_ID, t.BRANCH_NAME, m.region_name
+        having to_date(sysdate) - (max(t.inauguration_dt)) between '0' and '700') xx
+ order by lag_days desc
