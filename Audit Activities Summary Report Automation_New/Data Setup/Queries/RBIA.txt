@@ -1,0 +1,43 @@
+select distinct mm.* 
+  from (select a.branch_id,
+               b.branch_name,
+               m.region_name,
+               a.assign_to,
+               x.criteria,
+               a.alert_id,
+               a.doc_id,
+               a.process_dt,
+               (to_date(sysdate) - a.assign_date) as lagdays,
+               a.assign_date,
+               decode(a.manual_st, null, 'AA', 1, 'MA'),
+               a.inv_id,
+               decode(x.risk_cat,
+                      1,
+                      'High',
+                      2,
+                      'Medium',
+                      3,
+                      'Low',
+                      4,
+                      'Critical-1',
+                      5,
+                      'Critical-2',
+                      6,
+                      'Critical-3',
+                      null,
+                      'Not Added'),
+               a.assign_to_two
+          from mana0809.tbl_risk_alert_audit a,
+               mana0809.tbl_risk_alert_annex x,
+               mana0809.audit_region_mst     m,
+               mana0809.audit_region_dtl     d,
+               mana0809.branch_detail        b
+         where a.cat_id = x.alert_cat_id
+           and m.region_id = d.region_id
+           and d.branch_id = a.branch_id
+           and a.branch_id = b.branch_id
+           and a.status_id = 1
+           and a.assign_stat = 1
+           and a.alert_st is null
+           and a.process_dt >= '01-jan-2023'
+           and a.process_dt <= '05-jan-2023') mm

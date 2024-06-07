@@ -1,0 +1,19 @@
+select region_id, region_name, sum(branchid) 
+  from (select v.region_id,
+               p.region_name,
+               count(distinct s.branch_id) as branchid
+          from mana0809.TBL_CUST_BANKVERIFY_DATA s,
+               mana0809.audit_region_dtl         v,
+               mana0809.audit_region_mst         p,
+               mana0809.branch_master            l
+         where s.status = 0
+           and s.auditor_status is null
+           and to_date(s.approve_dt) >= '18-dec-2019'
+           and s.rha_status is null
+           and s.branch_id = v.branch_id
+           and v.region_id = p.region_id
+           and v.branch_id = l.branch_id
+           and s.branch_id = l.branch_id
+         group by v.branch_id, v.region_id, p.region_name)
+ group by branchid, region_id, region_name
+ order by region_id;

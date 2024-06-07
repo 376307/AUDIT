@@ -1,0 +1,43 @@
+
+
+---------------------completed today--------------------------
+
+select count(1) from mana0809.tbl_mtss_audit_data t where trunc(t.mt_audit_dt)=trunc(sysdate);  ----mtss
+select count(1) from mana0809.Tbl_forex_audit_data t where trunc(t.forex_audit_dt)=trunc(sysdate); ----forex  
+select count(1) from mana0809.tbl_sec_auditor_mst t where trunc(t.audit_dt)=trunc(sysdate); ----security
+select count(1) from mana0809.tbl_doc_audit_visit_plan t where trunc(t.tra_dt)=trunc(sysdate);  ----document audit
+select count(1) from mana0809.TBL_RISK_ALERT_MSt t where trunc(t.verif_dt)=trunc(sysdate); ----rbi modify
+select count(1) from mana0809.tbl_Highrisk_insert  t where trunc(t.tra_dt)=trunc(sysdate); ----high risk new
+select count(1) from mana0809.tbl_inspection_start_newinsp_his t where trunc(t.comp_date)=trunc(sysdate); ----risk based
+select count(1) from mis.tbl_inspection_start_his s where comp_date = to_date('21-07-2023', 'dd-mm-yyyy');--inspection  
+select count(1) from mana0809.TBL_CUST_BANKVERIFY_DATA  t where trunc(t.verify_dt)=trunc(sysdate); ----bank account
+select count(1) from mana0809.tbl_pkt_verifed t where trunc(t.verified_dt)=trunc(sysdate)-1; ----packet verif
+
+
+-------------- work in progress-----------------------
+
+select count(1)
+  from mana0809.tbl_doc_audit_visit_plan t
+ where t.audit_finish_dt is null
+   and t.audit_id like '%DOC%'
+   and t.audit_start_date is not null;---doc audit
+   
+ select count(1) from mana0809.tbl_inspection_start_newinsp_his t;--------risk based 
+ select count(1) from mis.tbl_inspection_start_his;----inspection
+
+
+   
+   
+   
+   
+   
+
+
+
+
+
+
+
+
+
+

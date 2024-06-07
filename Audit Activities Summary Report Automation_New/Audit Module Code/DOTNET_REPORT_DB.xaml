@@ -1,0 +1,218 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DOTNET_REPORT_DB" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Arg_Status" Type="InOutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1306,2608</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>DOTNET_REPORT_DB_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Excel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DOTNET_REPORT_DB" sap:VirtualizedContainerService.HintSize="498,2543" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,2451" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence sap:VirtualizedContainerService.HintSize="418,2224" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="write" />
+            <Variable x:TypeArguments="x:Boolean" Name="ARG_STATUS" />
+            <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_out" />
+            <Variable x:TypeArguments="sd:DataTable" Name="write1" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="INSP" sap:VirtualizedContainerService.HintSize="376,696" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;INSP DB Download Started&quot;]" />
+            <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=RPA_RO;uid=RPA_RO;pwd=Robot#123" DatabaseConnection="[db_out]" />
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" ConnectionString="Dsn=RPA_RO;uid=RPA_RO;pwd=Robot#123" DataTable="[write]" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" ProviderName="System.Data.Odbc" Sql="&#xA;select t.branch_id,&#xA;       t.branch_name,&#xA;       t.area_name,&#xA;       t.division_name,&#xA;       t.region_name,&#xA;       t.state_name,&#xA;       t.inagurat_date,&#xA;       t.live_customers,&#xA;       nvl(t.total_customers, 0),&#xA;       t.total_pldge,&#xA;       t.act_wt,&#xA;       t.net_wt,&#xA;       nvl(t.st_weight, 0),&#xA;       nvl(t.outstanding, 0),&#xA;       nvl(t.overdue_amt, 0),&#xA;       nvl(t.overdue_one_mnth, 0),&#xA;       nvl(t.overdue_onetwo_mnth, 0),&#xA;       nvl(t.overdue_twothree_mnth, 0),&#xA;       nvl(t.overdue_abvthree_mnth, 0),&#xA;       nvl(t.INTRANSIT, 0),&#xA;       nvl(t.UNDERAUCTION, 0),&#xA;       nvl(t.ogl_pledge_cnt, 0),&#xA;       nvl(t.ogl_os, 0),&#xA;       nvl(t.live_inv_cnt, 0)&#xA;  from mana0809.view_goldloan_outstanding t&#xA; order by t.branch_id&#xA;&#xA;">
+              <ui:ExecuteQuery.Parameters>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:ExecuteQuery.Parameters>
+            </ui:ExecuteQuery>
+            <ui:WriteRange AddHeaders="True" DataTable="[write]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[&quot;C:\Users\&quot;+Environment.UserName+&quot;\Documents\uipath\Audit Activities Summary Report Automation_New\input\INSPECTION\Dotnet_report.xlsx&quot;]">
+              <ui:WriteRange.StartingCell>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:WriteRange.StartingCell>
+            </ui:WriteRange>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;INSP DB Download Completed&quot;]" />
+          </Sequence>
+          <Sequence DisplayName="HIGH RISK" sap:VirtualizedContainerService.HintSize="376,597" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;High Risk Report Downloading started&quot;]" />
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" ConnectionString="Dsn=RPA_RO;uid=RPA_RO;pwd=Robot#123" DataTable="[write1]" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" ProviderName="System.Data.Odbc" Sql="--Audit High Risk Report--&#xD;&#xA;select qq.branch_id,&#xD;&#xA;       qq.branch_name,&#xD;&#xA;       qq.reg_name,&#xD;&#xA;       qq.alert_id,&#xD;&#xA;       qq.cust_id,&#xD;&#xA;       qq.gen_dt,&#xD;&#xA;       qq.Lag_days,&#xD;&#xA;       qq.alert_type&#xD;&#xA;  from (select a.branch_id branch_id,&#xD;&#xA;               b.BRANCH_NAME branch_name,&#xD;&#xA;               b.reg_name reg_name,&#xD;&#xA;               a.alert_id alert_id,&#xD;&#xA;               a.cust_id cust_id,&#xD;&#xA;               trunc(a.gen_dt) gen_dt,&#xD;&#xA;               trunc(sysdate + 1) - trunc(a.gen_dt) as Lag_days,&#xD;&#xA;               decode(a.alert_type, 1, 'Gold Outstanding 10 Lakhs') alert_type&#xD;&#xA;          from mana0809.tbl_highrisk_alert_gn a, mana0809.branch_dtl_new b&#xD;&#xA;         where a.branch_id = b.branch_id &#xD;&#xA;         and a.alert_sts='1'&#xD;&#xA;           and a.alert_confirm_sts = 1) qq&#xD;&#xA;  left outer join mana0809.TBL_HIGHRISK_INSERT i&#xD;&#xA;    on i.alert_id = qq.alert_id&#xD;&#xA; group by qq.branch_id,&#xD;&#xA;          qq.branch_name,&#xD;&#xA;          qq.reg_name,&#xD;&#xA;          qq.alert_id,&#xD;&#xA;          qq.cust_id,&#xD;&#xA;          qq.gen_dt,&#xD;&#xA;          qq.Lag_days,&#xD;&#xA;          qq.alert_type&#xD;&#xA; order by 3">
+              <ui:ExecuteQuery.Parameters>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:ExecuteQuery.Parameters>
+            </ui:ExecuteQuery>
+            <ui:WriteRange AddHeaders="True" DataTable="[write1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="HIGH RISK" WorkbookPath="[&quot;C:\Users\&quot;+Environment.UserName+&quot;\Documents\UiPath\Audit Activities Summary Report Automation_New\Data Setup\Output\Final Audit Reports.xlsx&quot;]">
+              <ui:WriteRange.StartingCell>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:WriteRange.StartingCell>
+            </ui:WriteRange>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;High Risk Report Downloading Completed&quot;]" />
+          </Sequence>
+          <Sequence DisplayName="Risk Based" sap:VirtualizedContainerService.HintSize="376,597" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="Riskb" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Risk Based Inspection Report Download Started&quot;]" />
+            <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" ConnectionString="Dsn=RPA_RO;uid=RPA_RO;pwd=Robot#123" DataTable="[Riskb]" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" ProviderName="System.Data.Odbc" Sql="select x.branch_id,&#xA;       x.branch_name,&#xA;       x.reg_name,&#xA;       x.fzm,&#xA;       x.start_dt,&#xA;       x.end_dt ||' / '|| ttt.dt risk_inspection_end_dt,&#xA;       -- ttt.dt inspection_end_dt,&#xA;       case when x.comp_date &gt;= ttt.dt then nvl((to_date(sysdate) - x.comp_date), 0) else&#xA;         nvl((to_date(sysdate) - ttt.dt), 0) end lag_days,&#xA;       x.color  &#xA;  from (select p.branch_id,&#xA;               bb.BRANCH_NAME,&#xA;               bb.reg_name,&#xA;               f.fzm,&#xA;               case&#xA;                 when (p.branch_id = pp.branch_id) and&#xA;                      pp.comm_date is not null then&#xA;                  to_char(pp.comm_date, 'DD-MM-YYYY')&#xA;                 else&#xA;                  to_char(p.comm_date, 'DD-MM-YYYY')&#xA;               end start_dt,&#xA;               case&#xA;                 when (p.branch_id = pp.branch_id) and&#xA;                      pp.comm_date is not null then&#xA;                  null&#xA;                 else&#xA;                  to_char(p.comp_date, 'DD-MM-YYYY')&#xA;               end end_dt,&#xA;               &#xA;               p.comp_date,&#xA;               case&#xA;                 when (to_date(sysdate) - p.comp_date) &lt; 30 and&#xA;                      pp.comp_date is null then&#xA;                  'Black'&#xA;                 when pp.comm_date is not null then&#xA;                  'Green'&#xA;                 else&#xA;                  'Red'&#xA;               end color&#xA;          from mana0809.TBL_INSPECTION_START_NEWINSP_HIS p&#xA;          left outer join mana0809.TBL_INSPECTION_START_NEWINSP pp&#xA;            on (p.branch_id = pp.branch_id), mana0809.tbl_fzm_master f,&#xA;         mana0809.audit_region_dtl b, mana0809.branch_dtl_new bb,&#xA;         (select t.branch_id, max(t.comm_date) dt&#xA;                  from mana0809.TBL_INSPECTION_START_NEWINSP_HIS t&#xA;                 group by t.branch_id) tt&#xA;         where p.branch_id = tt.branch_id&#xA;           and p.comm_date = tt.dt&#xA;           and p.branch_id = b.branch_id&#xA;           and b.region_id = f.region_id&#xA;           and b.branch_id = bb.BRANCH_ID&#xA;         order by 7 desc) x&#xA;  left outer join (select t.branch_id, max(t.comp_date) dt&#xA;                     from mis.TBL_INSPECTION_START_HIS t&#xA;                    group by t.branch_id) ttt&#xA;    on x.branch_id = ttt.branch_id order by 7 desc;">
+              <ui:ExecuteQuery.Parameters>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:ExecuteQuery.Parameters>
+            </ui:ExecuteQuery>
+            <ui:WriteRange AddHeaders="True" DataTable="[Riskb]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="RISK BASED" WorkbookPath="[&quot;C:\Users\&quot;+Environment.UserName+&quot;\Documents\UiPath\Audit Activities Summary Report Automation_New\Data Setup\Output\Final Audit Reports.xlsx&quot;]">
+              <ui:WriteRange.StartingCell>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:WriteRange.StartingCell>
+            </ui:WriteRange>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Risk Based Inspection Report Download Completed&quot;]" />
+          </Sequence>
+          <ui:DatabaseDisconnect DatabaseConnection="[db_out]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+          <Assign sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[ARG_STATUS]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[exception.Message]" />
+              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[Arg_Status]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
