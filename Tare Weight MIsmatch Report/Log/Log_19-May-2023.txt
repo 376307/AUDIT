@@ -1,1 +1,0 @@
-﻿05/19/2023,14:33:11,INFO,InitAllSettings,Tare Weight MIsmatch Report,DT614262-376307-376307-Automation_Process
